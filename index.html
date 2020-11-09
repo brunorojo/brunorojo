@@ -70,7 +70,6 @@
 <h3># BRANCH - DELETAR branch:</h3>
 <p><code>$git checkout -d &lt;branch_name&gt;</code></p>
 
-
 <h2>_MERGE:</h2>
 <h3># MERGE - Do branch DESENV para a MASTER:</h3>
 <p><code>$git checkout master</code> || Acessar a master...</p>
@@ -140,12 +139,10 @@
 <p><code>git reset HEAD file.txt</p></code> 
 <p><code> git restore --staged file.txt</p></code>
 
-
 <h3> DESFAZER ALTERACAO APÓS COMMIT, o codigo de commit usado deve ser o filho.(NAO PODE TER EXECUTADO O PUSH)</h3>
 <p><code> git reset --soft  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> (  null  >>  WORKING-DIR  add [INDEX/STAGE] << HEAD )</p>
 <p><code> git reset --mixed 2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code>(  null  >> [WORKING-DIR] <<  INDEX/STAGE  << HEAD )</p>
 <p><code> git reset --hard  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> ( apaga o conteudo do commit reseta o stage )</p>
-
 
 <h3>Create a new repository on the command line:</h3>
 <p><code> echo "# udemy.selenium.fwcaquino" >> README.md</p></code>
@@ -160,7 +157,6 @@
 <p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
 <p><code> git branch -M main</p></code>
 <p><code> git push -u origin main</p></code>
-
 	
 </body>
 </html>
