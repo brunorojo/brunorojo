@@ -114,5 +114,55 @@
 <h3># makes sure that Git output is colored:</h3>
 <p><code>$git config --global color.ui auto</code></p>
 
+	
+	# GIT LOG COMMANDS:
+git log --graph
+git log -l 10
+git log --decorate
+git log --author="author-name"
+git shortlog -sn
+git shortlog
+
+# REMOVER ARQUIVO JA COMMITADOS
+$ git rm <file.txt>
+$ git commit -m "<file.txt> was removed"
+$ git rm --cached <file.txt>
+
+# GIT DIFF COMMANDS:
+git diff
+git diff --name-only 
+
+# DESFAZER ALTERACAO EM UM ARQUIVO(ANTES DE ADD NO STAGED/INDEX):
+git checkout <file>
+
+# DESFAZER ALTERACAO EM UM ARQUIVO(APOS ADD NO STAGED/INDEX):
+git reset HEAD <file>
+ou 
+git restore --staged <file>
+
+
+##WORKING-DIR add INDEX/STAGE commit HEAD
+# DESFAZER ALTERACAO APOS COMMIT, o codigo de commit usado deve ser o filho.(NAO PODE TER EXECUTADO O PUSH)
+git reset --soft 2f46162aa1eb0d10899939bc941b9bb15719d2e4  (  null  >>  WORKING-DIR  add [INDEX/STAGE] << HEAD )
+git reset --mixed 2f46162aa1eb0d10899939bc941b9bb15719d2e4 (  null  >> [WORKING-DIR] <<  INDEX/STAGE  << HEAD )
+git reset --hard 84bbef964a09e46a9292456e62be2805fbffb64d  ( apaga o conteudo do commit reseta o stage )
+
+
+# Create a new repository on the command line:
+echo "# udemy.selenium.fwcaquino" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:brunorojo/udemy.selenium.fwcaquino.git
+git push -u origin main
+                
+# Push an existing repository from the command line:
+```
+git remote add origin git@github.com:brunorojo/udemy.selenium.fwcaquino.git
+git branch -M main
+git push -u origin main
+```
+	
 </body>
 </html>
