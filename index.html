@@ -115,7 +115,6 @@
 <p><code>$git config --global color.ui auto</code></p>
 
 	
-	
 <h3>GIT LOG COMMANDS:</h3>
 <p><code>git log --graph</code></p>
 <p><code>git log -l 10</code></p>
@@ -138,13 +137,11 @@
 <p><code>git checkout file.txt</p></code>
 
 <h3> DESFAZER ALTERACAO EM UM ARQUIVO(APOS ADD NO STAGED/INDEX):</h3>
-<p><code>git reset HEAD file.txt</p></code>
-ou 
+<p><code>git reset HEAD file.txt</p></code> 
 <p><code> git restore --staged file.txt</p></code>
 
 
-<h3>WORKING-DIR add INDEX/STAGE commit HEAD</h3>
-# DESFAZER ALTERACAO APÓS COMMIT, o codigo de commit usado deve ser o filho.(NAO PODE TER EXECUTADO O PUSH)
+<h3> DESFAZER ALTERACAO APÓS COMMIT, o codigo de commit usado deve ser o filho.(NAO PODE TER EXECUTADO O PUSH)</h3>
 <p><code> git reset --soft  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> (  null  >>  WORKING-DIR  add [INDEX/STAGE] << HEAD )</p>
 <p><code> git reset --mixed 2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code>(  null  >> [WORKING-DIR] <<  INDEX/STAGE  << HEAD )</p>
 <p><code> git reset --hard  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> ( apaga o conteudo do commit reseta o stage )</p>
