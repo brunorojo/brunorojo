@@ -111,8 +111,56 @@
 <h3># Exibir log em apenas 1 linha por commit:</h3>
 <p><code>$git config format.pretty oneline</code></p>
 
-<h3># makes sure that Git output is colored:</h3>
+<h3># Makes sure that Git output is colored:</h3>
 <p><code>$git config --global color.ui auto</code></p>
 
+	
+<h3>GIT LOG COMMANDS:</h3>
+<p><code>git log --graph</code></p>
+<p><code>git log -l 10</code></p>
+<p><code>git log --decorate</code></p>
+<p><code>git log --author="author-name"</code></p>
+<p><code>git shortlog -sn</code></p>
+<p><code>git shortlog</code></p>
+
+
+<h3>REMOVER ARQUIVO JA COMMITADOS</h3>
+<p><code>git rm file.txt</p></code>
+<p><code>git commit -m "file.txt was removed"</p></code>
+<p><code>git rm --cached file.txt</p></code>
+
+<h3> GIT DIFF COMMANDS:</h3>
+<p><code>git diff</p></code>
+<p><code>git diff --name-only</p></code> 
+
+<h3> DESFAZER ALTERACAO EM UM ARQUIVO(ANTES DE ADD NO STAGED/INDEX):</h3>
+<p><code>git checkout file.txt</p></code>
+
+<h3> DESFAZER ALTERACAO EM UM ARQUIVO(APOS ADD NO STAGED/INDEX):</h3>
+<p><code>git reset HEAD file.txt</p></code> 
+<p><code> git restore --staged file.txt</p></code>
+
+
+<h3> DESFAZER ALTERACAO APÓS COMMIT, o codigo de commit usado deve ser o filho.(NAO PODE TER EXECUTADO O PUSH)</h3>
+<p><code> git reset --soft  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> (  null  >>  WORKING-DIR  add [INDEX/STAGE] << HEAD )</p>
+<p><code> git reset --mixed 2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code>(  null  >> [WORKING-DIR] <<  INDEX/STAGE  << HEAD )</p>
+<p><code> git reset --hard  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> ( apaga o conteudo do commit reseta o stage )</p>
+
+
+<h3>Create a new repository on the command line:</h3>
+<p><code> echo "# udemy.selenium.fwcaquino" >> README.md</p></code>
+<p><code> git init</p></code>
+<p><code> git add README.md</p></code>
+<p><code> git commit -m "first commit"</p></code>
+<p><code> git branch -M main</p></code>
+<p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
+<p><code> git push -u origin main</p></code>
+                
+<h3>Push an existing repository from the command line:</h3>
+<p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
+<p><code> git branch -M main</p></code>
+<p><code> git push -u origin main</p></code>
+
+	
 </body>
 </html>
