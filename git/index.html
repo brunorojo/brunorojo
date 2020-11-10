@@ -11,109 +11,94 @@
 <h1>brunorojo.github.io || GIT-GUIDE</h1>
 <br>
 
-<h3># Configura PC:</h3>
+<h3>Configurar PC</h3>
 <p><code> git config --global user.name "Bruno Rojo"</code></p>
 <p><code> git config --global user.email "email@gmail.com"</code></p>
 
-<h3># Gerar chave SSH e cópia para a clipboard do Windows:</h3>
+<h3>Gerar chave SSH e cópia para a clipboard do Windows</h3>
 <p><code> ssh-keygen -t rsa -C “email@email.com”</code></p>
 <p><code> clip < ~/.ssh/id_rsa.pub</code></p>
 
-<h3># Iniciar git:</h3>
-<p><code> git init</code></p>
-
-<h3># Baixar o projeto do repo:</h3>
-<p><code> git clone &lt;repo&gt; &lt;folder_name&gt;</code></p>
-
-<h3># Add, commit and send:</h3>
-<p><code> git add .</code></p>
-<p><code> git commit -m "msg"</code></p>
-<p><code> git push origin master</code></p>
-
-<h3># Update local repo:</h3>
+<h3> Update local repo</h3>
 <p><code> git pull</code></p>
 
-<h3># displays the original state in a conflict:</h3>
+<h3> Displays the original state in a conflict</h3>
 <p><code> git config --global merge.conflictstyle diff3</code></p>
 
-<h3># display conf git:</h3>
+<h3> Display conf git</h3>
 <p><code> git config --list</code></p>
 
-<h3># Logs:</h3>
+<h3> Logs:</h3>
 <p><code> git log</code></p>
 
-<h3># Remover um arquivo do STAGING INDEX após commit:</h3>
+<h3> Remover um arquivo do STAGING INDEX após commit</h3>
 <p><code> git rm --cached &lt;filename&gt;</code></p>
 
-<h2>_BRANCHING:</h2>
-<h3># BRANCH - Listar branch:</h3>
+<h3>BRANCH - Listar branch</h3>
 <p><code> git branch</code></p>
 
-<h3># BRANCH - Crie um branch com o nome DESENV a partir da cópia da head do branch MASTER:</h3>
+<h3>BRANCH - Crie um branch com o nome DESENV a partir da cópia da head do branch MASTER</h3>
 <p><code> git checkout -b desenv master</code></p>
 <p><code> git status</code></p>
 
-<h3># BRANCH - Criar novo branch com o nome DESENV e colocar o SHA da linha do tempo.</h3>
+<h3>BRANCH - Criar novo branch com o nome DESENV e colocar o SHA da linha do tempo</h3>
 <p><code> git branch desenv &lt;SHA&gt;</code></p>
 
-<h3># BRANCH - Criar um branch com o nome DESENV:</h3>
+<h3>BRANCH - Criar um branch com o nome DESENV</h3>
 <p><code> git checkout -b desenv</code></p>
 <p><code> git status</code></p>
 
-<h3># BRANCH - DESFAZER O MERGE:</h3>
+<h3>BRANCH - DESFAZER O MERGE</h3>
 <p><code> git reset --hard HEAD^</code></p>
 
-<h3># BRANCH - Alterar branch:</h3>
+<h3>BRANCH - Alterar branch</h3>
 <p><code> git checkout &lt;branch_name&gt;</code></p>
 
-<h3># BRANCH - DELETAR branch:</h3>
+<h3>BRANCH - DELETAR branch:</h3>
 <p><code> git checkout -d &lt;branch_name&gt;</code></p>
 
-<h2>_MERGE:</h2>
-<h3># MERGE - Do branch DESENV para a MASTER:</h3>
+<h3>MERGE - Do branch DESENV para a MASTER</h3>
 <p><code> git checkout master</code> || Acessar a master...</p>
 <p><code> git merge desenv master</code> || Executa o merge...</p>
 <p><code> git commit -m "msg..."</code> || Commit o merge...</p>
 <p><code> git push</code> || Envia pro repo.</p>
 
-<h2>_TAG</h2>
-<h3># TAG - Criar tag:</h3>
+<h3>TAG - Criar tag</h3>
 <p><code> git tag -a &lt;tag&gt;</code></p>
 
-<h3># TAG - Consultar tag:</h3>
+<h3>TAG - Consultar tag</h3>
 <p><code> git tag</code></p>
 
-<h3># TAG - Apagar tag:</h3>
+<h3>TAG - Apagar tag</h3>
 <p><code> git tag -d &lt;tag&gt;</code></p>
 
-<h3># TAG - Consultar tag pelo commando de log:</h3>
+<h3>TAG - Consultar tag pelo commando de log</h3>
 <p><code> git log --decorate</code></p>
 
-<h2>_SHOW</h2>
-<h3># SHOW - Listar detalhes dos commits:</h3>
+<h3>SHOW - Listar detalhes dos commits</h3>
 <p><code> git show</code></p>
 
-<h3># SHOW - Listar detalhes dos commits por SHA:</h3>
+<h3># SHOW - Listar detalhes dos commits por SHA</h3>
 <p><code> git show &lt;SHA&gt;</code></p>
 
-<h3># SHOW - Listar detalhes e ignorar espaços em branco:</h3>
+<h3>SHOW - Listar detalhes e ignorar espaços em branco</h3>
 <p><code> git show -w</code></p>
 
-<h3># SHOW - Listar detalhes dos commits e mostrar quantidade de arquivos e linhas modificadas:</h3>
+<h3>SHOW - Listar detalhes dos commits e mostrar quantidade de arquivos e linhas modificadas</h3>
 <p><code> git show --stat -p -w</code></p>
 
-<h1>_DICAS</h1>
-<h3># Inclusões interativas:</h3>
+
+<h3>Inclusões interativas</h3>
 <p><code> git add -i</code></p>
 
-<h3># Exibir log em apenas 1 linha por commit:</h3>
+<h3>Exibir log em apenas 1 linha por commit</h3>
 <p><code> git config format.pretty oneline</code></p>
 
-<h3># Makes sure that Git output is colored:</h3>
+<h3>Makes sure that Git output is colored</h3>
 <p><code> git config --global color.ui auto</code></p>
 
 	
-<h3>GIT LOG COMMANDS:</h3>
+<h3>GIT LOG COMMANDS</h3>
 <p><code> git log --graph</code></p>
 <p><code> git log -l 10</code></p>
 <p><code> git log --decorate</code></p>
@@ -127,14 +112,14 @@
 <p><code> git commit -m "file.txt was removed"</p></code>
 <p><code> git rm --cached file.txt</p></code>
 
-<h3> GIT DIFF COMMANDS:</h3>
+<h3> GIT DIFF COMMANDS</h3>
 <p><code> git diff</p></code>
 <p><code> git diff --name-only</p></code> 
 
-<h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(ANTES DE ADD NO STAGED/INDEX):</h3>
+<h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(ANTES DE ADD NO STAGED/INDEX)</h3>
 <p><code> git checkout file.txt</p></code>
 
-<h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(APÓS ADD NO STAGED/INDEX):</h3>
+<h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(APÓS ADD NO STAGED/INDEX)</h3>
 <p><code> git reset HEAD file.txt</p></code> 
 <p><code> git restore --staged file.txt</p></code>
 
@@ -143,7 +128,7 @@
 <p><code> git reset --mixed 2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code>(  null  >> [WORKING-DIR] <<  INDEX/STAGE  << HEAD )</p>
 <p><code> git reset --hard  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> ( apaga o conteúdo do commit reseta o INDEX/STAGE )</p>
 
-<h3>Create a new repository on the command line:</h3>
+<h3>Create a new repository on the command line</h3>
 <p><code> echo "# selenium" >> README.md</p></code>
 <p><code> git init</p></code>
 <p><code> git add README.md</p></code>
@@ -152,7 +137,7 @@
 <p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
 <p><code> git push -u origin main</p></code>
                 
-<h3>Push an existing repository from the command line:</h3>
+<h3>Push an existing repository from the command line</h3>
 <p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
 <p><code> git branch -M main</p></code>
 <p><code> git push -u origin main</p></code>
