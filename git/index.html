@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>brunorojo.github.io || GIT-GUIDE</title>		
+    <title>brunorojo.github.io || GIT-ANNOTATION</title>
+    <link href="../img/brfavicon.ico" rel="icon" type="imagem/x-icon" />
 </head>
 		
 <body>
-<h1>brunorojo.github.io || GIT-GUIDE</h1>
+<h1>brunorojo.github.io || GIT-ANNOTATION</h1>
 <br>
 
 <h3>Configurar PC</h3>
@@ -108,20 +109,20 @@
 
 
 <h3>REMOVER ARQUIVO JA COMMITADOS</h3>
-<p><code> git rm file.txt</p></code>
-<p><code> git commit -m "file.txt was removed"</p></code>
-<p><code> git rm --cached file.txt</p></code>
+<p><code> git rm file.txt</code></p>
+<p><code> git commit -m "file.txt was removed"</code></p>
+<p><code> git rm --cached file.txt</code></p>
 
 <h3> GIT DIFF COMMANDS</h3>
-<p><code> git diff</p></code>
-<p><code> git diff --name-only</p></code> 
+<p><code> git diff</code></p>
+<p><code> git diff --name-only</code></p> 
 
 <h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(ANTES DE ADD NO STAGED/INDEX)</h3>
-<p><code> git checkout file.txt</p></code>
+<p><code> git checkout file.txt</code></p>
 
 <h3> DESFAZER ALTERAÇÕES EM UM ARQUIVO(APÓS ADD NO STAGED/INDEX)</h3>
-<p><code> git reset HEAD file.txt</p></code> 
-<p><code> git restore --staged file.txt</p></code>
+<p><code> git reset HEAD file.txt</code></p> 
+<p><code> git restore --staged file.txt</code></p>
 
 <h3> DESFAZER ALTERAÇÕES APÓS COMMIT, o código do commit usado deve ser o filho.(PUSH NÃO PODE TER SIDO EXECUTADO)</h3>
 <p><code> git reset --soft  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> (  null  >>  WORKING-DIR  add [INDEX/STAGE] << HEAD )</p>
@@ -129,18 +130,18 @@
 <p><code> git reset --hard  2f46162aa1eb0d10899939bc941b9bb15719d2e4 </code> ( apaga o conteúdo do commit reseta o INDEX/STAGE )</p>
 
 <h3>Create a new repository on the command line</h3>
-<p><code> echo "# selenium" >> README.md</p></code>
-<p><code> git init</p></code>
-<p><code> git add README.md</p></code>
-<p><code> git commit -m "first commit"</p></code>
-<p><code> git branch -M main</p></code>
-<p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
-<p><code> git push -u origin main</p></code>
+<p><code> echo "# selenium" >> README.md</code></p>
+<p><code> git init</code></p>
+<p><code> git add README.md</code></p>
+<p><code> git commit -m "first commit"</code></p>
+<p><code> git branch -M main</code></p>
+<p><code> git remote add origin git@github.com:brunorojo/selenium.git</code></p>
+<p><code> git push -u origin main</code></p>
                 
 <h3>Push an existing repository from the command line</h3>
-<p><code> git remote add origin git@github.com:brunorojo/selenium.git</p></code>
-<p><code> git branch -M main</p></code>
-<p><code> git push -u origin main</p></code>
+<p><code> git remote add origin git@github.com:brunorojo/selenium.git</code></p>
+<p><code> git branch -M main</code></p>
+<p><code> git push -u origin main</code></p>
 	
 </body>
 </html>

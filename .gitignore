@@ -1,2 +1,2 @@
-# VSCODE IDE
 *.code-workspace
+.vs
