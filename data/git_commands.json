@@ -1,0 +1,52 @@
+[
+  {
+    "command": "git init",
+    "description": "Inicializa um novo repositório Git",
+    "example": "git init"
+  },
+  {
+    "command": "git clone [url]",
+    "description": "Clona um repositório remoto",
+    "example": "git clone https://github.com/usuario/repo.git"
+  },
+  {
+    "command": "git add [file]",
+    "description": "Adiciona um arquivo ao índice",
+    "example": "git add arquivo.txt"
+  },
+  {
+    "command": "git commit -m 'mensagem'",
+    "description": "Confirma as alterações no índice",
+    "example": "git commit -m 'Mensagem de commit'"
+  },
+  {
+    "command": "git status",
+    "description": "Mostra o status das alterações",
+    "example": "git status"
+  },
+  {
+    "command": "git push",
+    "description": "Envia as alterações para o repositório remoto",
+    "example": "git push origin main"
+  },
+  {
+    "command": "git pull",
+    "description": "Atualiza o repositório local com as alterações do repositório remoto",
+    "example": "git pull origin main"
+  },
+  {
+    "command": "git branch",
+    "description": "Lista as branches locais",
+    "example": "git branch"
+  },
+  {
+    "command": "git checkout [branch]",
+    "description": "Troca para a branch especificada",
+    "example": "git checkout develop"
+  },
+  {
+    "command": "git merge [branch]",
+    "description": "Faz merge da branch especificada com a branch atual",
+    "example": "git merge feature-branch"
+  }
+]
