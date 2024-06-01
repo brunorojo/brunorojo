@@ -1,52 +1,247 @@
 [
   {
-    "command": "git init",
-    "description": "Inicializa um novo repositório Git",
-    "example": "git init"
+    "command": "git config --global user.name \"Bruno Rojo\"",
+    "description": "Configurar nome do usuário global",
+    "example": "git config --global user.name \"Bruno Rojo\""
   },
   {
-    "command": "git clone [url]",
-    "description": "Clona um repositório remoto",
-    "example": "git clone https://github.com/usuario/repo.git"
+    "command": "git config --global user.email \"email@gmail.com\"",
+    "description": "Configurar email do usuário global",
+    "example": "git config --global user.email \"email@gmail.com\""
   },
   {
-    "command": "git add [file]",
-    "description": "Adiciona um arquivo ao índice",
-    "example": "git add arquivo.txt"
+    "command": "ssh-keygen -t rsa -C \"email@email.com\"",
+    "description": "Gerar chave SSH",
+    "example": "ssh-keygen -t rsa -C \"email@email.com\""
   },
   {
-    "command": "git commit -m 'mensagem'",
-    "description": "Confirma as alterações no índice",
-    "example": "git commit -m 'Mensagem de commit'"
-  },
-  {
-    "command": "git status",
-    "description": "Mostra o status das alterações",
-    "example": "git status"
-  },
-  {
-    "command": "git push",
-    "description": "Envia as alterações para o repositório remoto",
-    "example": "git push origin main"
+    "command": "clip < ~/.ssh/id_rsa.pub",
+    "description": "Copiar chave SSH para a área de transferência do Windows",
+    "example": "clip < ~/.ssh/id_rsa.pub"
   },
   {
     "command": "git pull",
-    "description": "Atualiza o repositório local com as alterações do repositório remoto",
-    "example": "git pull origin main"
+    "description": "Atualizar repositório local",
+    "example": "git pull"
+  },
+  {
+    "command": "git config --global merge.conflictstyle diff3",
+    "description": "Exibir estado original em um conflito",
+    "example": "git config --global merge.conflictstyle diff3"
+  },
+  {
+    "command": "git config --list",
+    "description": "Exibir configuração do Git",
+    "example": "git config --list"
+  },
+  {
+    "command": "git log",
+    "description": "Exibir logs",
+    "example": "git log"
+  },
+  {
+    "command": "git rm --cached <filename>",
+    "description": "Remover um arquivo do índice de staging após commit",
+    "example": "git rm --cached <filename>"
   },
   {
     "command": "git branch",
-    "description": "Lista as branches locais",
+    "description": "Listar branches",
     "example": "git branch"
   },
   {
-    "command": "git checkout [branch]",
-    "description": "Troca para a branch especificada",
-    "example": "git checkout develop"
+    "command": "git checkout -b desenv master",
+    "description": "Criar um branch com o nome DESENV a partir do branch MASTER",
+    "example": "git checkout -b desenv master"
   },
   {
-    "command": "git merge [branch]",
-    "description": "Faz merge da branch especificada com a branch atual",
-    "example": "git merge feature-branch"
+    "command": "git status",
+    "description": "Exibir status do repositório",
+    "example": "git status"
+  },
+  {
+    "command": "git branch desenv <SHA>",
+    "description": "Criar novo branch com o nome DESENV e colocar o SHA da linha do tempo",
+    "example": "git branch desenv <SHA>"
+  },
+  {
+    "command": "git checkout -b desenv",
+    "description": "Criar um branch com o nome DESENV",
+    "example": "git checkout -b desenv"
+  },
+  {
+    "command": "git reset --hard HEAD^",
+    "description": "Desfazer o merge",
+    "example": "git reset --hard HEAD^"
+  },
+  {
+    "command": "git checkout <branch_name>",
+    "description": "Alterar branch",
+    "example": "git checkout <branch_name>"
+  },
+  {
+    "command": "git checkout -d <branch_name>",
+    "description": "Deletar branch",
+    "example": "git checkout -d <branch_name>"
+  },
+  {
+    "command": "git checkout master",
+    "description": "Processo para mergear a branch DESENV para a MASTER - Passo 1",
+    "example": "git checkout master"
+  },
+  {
+    "command": "git merge desenv master",
+    "description": "Processo para mergear a branch DESENV para a MASTER - Passo 2",
+    "example": "git merge desenv master"
+  },
+  {
+    "command": "git commit -m \"msg...\"",
+    "description": "Processo para mergear a branch DESENV para a MASTER - Passo 3",
+    "example": "git commit -m \"msg...\""
+  },
+  {
+    "command": "git push",
+    "description": "Processo para mergear a branch DESENV para a MASTER - Passo 4",
+    "example": "git push"
+  },
+  {
+    "command": "git tag -a <tag>",
+    "description": "Criar tag",
+    "example": "git tag -a <tag>"
+  },
+  {
+    "command": "git tag",
+    "description": "Consultar tag",
+    "example": "git tag"
+  },
+  {
+    "command": "git tag -d <tag>",
+    "description": "Apagar tag",
+    "example": "git tag -d <tag>"
+  },
+  {
+    "command": "git log --decorate",
+    "description": "Consultar tag pelo comando de log",
+    "example": "git log --decorate"
+  },
+  {
+    "command": "git show",
+    "description": "Listar detalhes dos commits",
+    "example": "git show"
+  },
+  {
+    "command": "git show <SHA>",
+    "description": "Listar detalhes dos commits por SHA",
+    "example": "git show <SHA>"
+  },
+  {
+    "command": "git show -w",
+    "description": "Listar detalhes e ignorar espaços em branco",
+    "example": "git show -w"
+  },
+  {
+    "command": "git show --stat -p -w",
+    "description": "Listar detalhes dos commits e mostrar quantidade de arquivos e linhas modificadas",
+    "example": "git show --stat -p -w"
+  },
+  {
+    "command": "git add -i",
+    "description": "Inclusões interativas",
+    "example": "git add -i"
+  },
+  {
+    "command": "git config format.pretty oneline",
+    "description": "Exibir log em apenas uma linha por commit",
+    "example": "git config format.pretty oneline"
+  },
+  {
+    "command": "git config --global color.ui auto",
+    "description": "Garantir que a saída do Git seja colorida",
+    "example": "git config --global color.ui auto"
+  },
+  {
+    "command": "git log --graph",
+    "description": "Comandos Git log - Exibir log em formato de gráfico",
+    "example": "git log --graph"
+  },
+  {
+    "command": "git log -l 10",
+    "description": "Comandos Git log - Exibir os últimos 10 logs",
+    "example": "git log -l 10"
+  },
+  {
+    "command": "git log --decorate",
+    "description": "Comandos Git log - Exibir log decorado",
+    "example": "git log --decorate"
+  },
+  {
+    "command": "git log --author=\"author-name\"",
+    "description": "Comandos Git log - Exibir log por autor",
+    "example": "git log --author=\"author-name\""
+  },
+  {
+    "command": "git shortlog -sn",
+    "description": "Comandos Git log - Exibir resumo do log por autor",
+    "example": "git shortlog -sn"
+  },
+  {
+    "command": "git shortlog",
+    "description": "Comandos Git log - Exibir resumo do log",
+    "example": "git shortlog"
+  },
+  {
+    "command": "git rm file.txt",
+    "description": "Remover arquivos já commitados - Passo 1",
+    "example": "git rm file.txt"
+  },
+  {
+    "command": "git commit -m \"file.txt was removed\"",
+    "description": "Remover arquivos já commitados - Passo 2",
+    "example": "git commit -m \"file.txt was removed\""
+  },
+  {
+    "command": "git rm --cached file.txt",
+    "description": "Remover arquivos já commitados - Passo 3",
+    "example": "git rm --cached file.txt"
+  },
+  {
+    "command": "git diff",
+    "description": "Comandos Git diff - Exibir diferenças",
+    "example": "git diff"
+  },
+  {
+    "command": "git diff --name-only",
+    "description": "Comandos Git diff - Exibir nomes dos arquivos que tiveram diferenças",
+    "example": "git diff --name-only"
+  },
+  {
+    "command": "git checkout file.txt",
+    "description": "Desfazer alterações em um arquivo antes de adicionar ao índice",
+    "example": "git checkout file.txt"
+  },
+  {
+    "command": "git reset HEAD file.txt",
+    "description": "Desfazer alterações em um arquivo após adicionar ao índice",
+    "example": "git reset HEAD file.txt"
+  },
+  {
+    "command": "git restore --staged file.txt",
+    "description": "Desfazer alterações em um arquivo após adicionar ao índice - Alternativa",
+    "example": "git restore --staged file.txt"
+  },
+  {
+    "command": "git reset --soft 22b6162aa1eb0d10899939bc941b9bb15719d2e4",
+    "description": "Desfazer alterações após commit, sem alterar o diretório de trabalho",
+    "example": "git reset --soft 22b6162aa1eb0d10899939bc941b9bb15719d2e4"
+  },
+  {
+    "command": "git reset --mixed 22b6162aa1eb0d10899939bc941b9bb15719d2e4",
+    "description": "Desfazer alterações após commit, resetando o índice",
+    "example": "git reset --mixed 22b6162aa1eb0d10899939bc941b9bb15719d2e4"
+  },
+  {
+    "command": "git reset --hard 22b6162aa1eb0d10899939bc941b9bb15719d2e4",
+    "description": "Desfazer alterações após commit e resetar o índice e o diretório de trabalho",
+    "example": "git reset --hard 22b6162aa1eb0d10899939bc941b9bb15719d2e4"
   }
 ]

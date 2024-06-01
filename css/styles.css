@@ -19,16 +19,16 @@ nav {
     padding: 10px;
 }
 
-    nav a {
-        color: #FFD700; /* Amarelo */
-        margin: 0 10px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+nav a {
+    color: #FFD700; /* Amarelo */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
 .container {
     padding: 20px;
@@ -42,37 +42,37 @@ nav {
     margin-bottom: 20px;
 }
 
-    .search-box input {
-        padding: 5px;
-        width: 100%;
-        max-width: 300px;
-        font-size: 16px;
-    }
+.search-box input {
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
 
 .item-list {
     list-style: none;
     padding: 0;
 }
 
-    .item-list li {
-        background-color: #1e1e1e; /* Fundo do Git Bash */
-        color: #dcdcdc; /* Texto Git Bash */
-        margin: 5px 0;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-left: 5px solid #00509E; /* Azul médio */
-        font-family: Consolas, 'Courier New', monospace; /* Fonte do terminal */
-    }
+.item-list li {
+    background-color: #1e1e1e; /* Fundo do Git Bash */
+    color: #389a07; /* Texto Git Bash */
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: 5px solid #00509E; /* Azul médio */
+    font-family: Consolas, 'Courier New', monospace; /* Fonte do terminal */
+}
 
-        .item-list li strong {
-            color: #808080; /* Cinza para comandos */
-        }
+.item-list li strong {
+    color: #808080; /* Cinza para comandos */
+}
 
-        .item-list li .example {
-            display: block;
-            color: #FFD700; /* Amarelo para exemplos */
-            margin-top: 5px;
-            background-color: #282c34; /* Fundo mais escuro para exemplo */
-            padding: 5px;
-            border-radius: 3px;
-        }
+.item-list li .example {
+    display: block;
+    color: #8c8c8c ; /* comando-examples */
+    margin-top: 5px;
+    background-color: #282c34; /* Fundo mais escuro para exemplo */
+    padding: 5px;
+    border-radius: 3px;
+}

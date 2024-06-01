@@ -1,17 +1,17 @@
-// Função para exibir a seção desejada sem rolagem suave
+// Funï¿½ï¿½o para exibir a seï¿½ï¿½o desejada sem rolagem suave
 function showSection(sectionId) {
-    // Oculta todas as seções
+    // Oculta todas as seï¿½ï¿½es
     const sections = document.querySelectorAll('.container');
     sections.forEach(section => {
         section.classList.add('hidden');
     });
 
-    // Exibe a seção desejada
+    // Exibe a seï¿½ï¿½o desejada
     const sectionToShow = document.getElementById(sectionId);
     sectionToShow.classList.remove('hidden');
 }
 
-// Função para pesquisar itens na lista de comandos do Git ou de favoritos
+// Funï¿½ï¿½o para pesquisar itens na lista de comandos do Git ou de favoritos
 function searchItems(type) {
     const query = document.getElementById(type + 'Search').value.toLowerCase();
     const items = document.querySelectorAll('#' + type + 'List li');
@@ -21,7 +21,7 @@ function searchItems(type) {
     });
 }
 
-// Função para carregar os comandos Git
+// Funï¿½ï¿½o para carregar os comandos Git
 function loadGitCommands() {
     fetch('data/git_commands.json')
         .then(response => response.json())
@@ -29,14 +29,14 @@ function loadGitCommands() {
             const gitList = document.getElementById('gitList');
             commands.forEach(command => {
                 const listItem = document.createElement('li');
-                listItem.innerHTML = `<strong>${command.command}:</strong> ${command.description}<span class="example">${command.example}</span>`;
+                listItem.innerHTML = `${command.description}<span class="example">${command.example}</span>`;
                 gitList.appendChild(listItem);
             });
         })
         .catch(error => console.error('Erro ao carregar comandos Git:', error));
 }
 
-// Função para adicionar um favorito
+// Funï¿½ï¿½o para adicionar um favorito
 function addFavorite() {
     const name = document.getElementById('newFavName').value;
     const url = document.getElementById('newFavURL').value;
@@ -49,12 +49,12 @@ function addFavorite() {
     }
 }
 
-// Função para remover um item da lista de favoritos
+// Funï¿½ï¿½o para remover um item da lista de favoritos
 function removeItem(element) {
     element.parentElement.remove();
 }
 
-// Inicializar na seção Home e carregar comandos Git
+// Inicializar na seï¿½ï¿½o Home e carregar comandos Git
 document.addEventListener("DOMContentLoaded", function () {
     showSection('home');
     loadGitCommands();
